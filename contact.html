@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Habibullah Salmani</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">HABIBULLAH · PORTFOLIO</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h1 class="section-title">Contact</h1>
+      <p class="section-subtitle">
+        Feel free to reach out for opportunities, collaborations or questions.
+      </p>
+
+      <div class="contact-card">
+        <p>
+          I am open to roles in Data Science, Machine Learning and Full Stack
+          Development. If you think I could be a good fit for your team or
+          project, you can contact me using the details below.
+        </p>
+
+        <div class="contact-row">
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">
+              <a href="mailto:hshabibullah@gmail.com">
+                hshabibullah@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">
+              <a href="https://github.com/hihabibiiii" target="_blank">
+                github.com/hihabibiiii
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">India</div>
+          </div>
+        </div>
+
+        <!-- Optional simple contact form (no backend yet) -->
+        <form
+          class="contact-form"
+          action="mailto:hshabibullah@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <h2 class="mini-title">Quick Message</h2>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Write your message..."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Send Email
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Habibullah Salmani · Built with HTML, CSS &amp; JS
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

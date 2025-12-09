@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Habibullah Salmani | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">HABIBULLAH · PORTFOLIO</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="container hero-wrapper">
+      <div class="hero">
+        <div>
+          <div class="hero-kicker">Data Scientist · Full Stack Developer</div>
+          <h1 class="hero-title">
+            Hi, I'm <span>Habibullah&nbsp;Salmani</span>
+          </h1>
+          <p class="hero-subtitle">
+            I build data-driven solutions and full-stack applications using
+            Python, C++, and modern web technologies. I enjoy turning ideas
+            into clean, practical products that actually work in the real world.
+          </p>
+
+          <div class="hero-tags">
+            <span class="tag">Data Science</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Full Stack Development</span>
+            <span class="tag">Python</span>
+            <span class="tag">C++</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              View My Projects →
+            </a>
+            <a href="contact.html" class="btn btn-outline">
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hero-chip">
+              <span>🔍</span>
+              <span>Open to opportunities</span>
+            </div>
+            <div class="hero-metrics">
+              <div>
+                <div class="metric-label">Role</div>
+                <div class="metric-value">
+                  Data Scientist · Full Stack Developer
+                </div>
+              </div>
+              <div>
+                <div class="metric-label">Core Stack</div>
+                <div class="metric-value">
+                  Python, C++, HTML, CSS, JavaScript
+                </div>
+                <div class="stack-badges">
+                  <span>Scikit-Learn</span>
+                  <span>Pandas</span>
+                  <span>NumPy</span>
+                  <span>Git &amp; GitHub</span>
+                </div>
+              </div>
+              <div>
+                <div class="metric-label">Focus Areas</div>
+                <div class="metric-value">
+                  ML models · APIs · Web Apps
+                </div>
+              </div>
+            </div>
+            <small class="hero-note">
+              I have completed a Data Scientist course and work on practical
+              projects in data science and full stack development.
+            </small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">
+          A selection of my work in data science and full-stack development.
+        </p>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div>
+              <h3 class="project-name">House Price Prediction Model</h3>
+              <p class="project-tagline">Machine learning · Regression</p>
+            </div>
+            <p class="project-desc">
+              Built a regression model to predict house prices using a housing
+              dataset. Includes data cleaning, feature engineering, model
+              training and evaluation. The trained model is exported as a
+              <code>.pkl</code> file and integrated with a simple UI for
+              predictions.
+            </p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>Scikit-Learn</span>
+              <span>Matplotlib</span>
+              <span>Model Deployment</span>
+            </div>
+            <div class="project-links">
+              <a href="#" target="https://github.com/hihabibiiii/housing-price-prediction-streamlit.git" rel="noopener">View Code (GitHub)</a>
+              <a href="#" target="_blank" rel="noopener">Live Demo</a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div>
+              <h3 class="project-name">Movie Recommendation System</h3>
+              <p class="project-tagline">Recommendation engine · Python</p>
+            </div>
+            <p class="project-desc">
+              Implemented a movie recommendation system using Python. Uses
+              recommendation logic to suggest relevant movies. The repository
+              includes documentation and a simple interface to test
+              recommendations.
+            </p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>Recommendation Logic</span>
+            </div>
+            <div class="project-links">
+              <a href="#" target="https://github.com/hihabibiiii/-Movie-Recommendation-System-using-ML-Streamlit.git" rel="noopener">View Code (GitHub)</a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div>
+              <h3 class="project-name">Full Stack Chatting App (In Progress)</h3>
+              <p class="project-tagline">Real-time communication · Full stack</p>
+            </div>
+            <p class="project-desc">
+              Working on a real-time chat application with user authentication
+              and a clean interface. Focus on socket-based communication, secure
+              login and a structured backend that can later support features
+              like message history.
+            </p>
+            <div class="project-tech">
+              <span>Full Stack</span>
+              <span>Python (backend)</span>
+              <span>Real-time</span>
+              <span>Authentication</span>
+            </div>
+            <div class="project-links">
+              <span class="muted-text">
+                Code will be published on GitHub after core features are
+                complete.
+              </span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Habibullah Salmani · Built with HTML, CSS &amp; JS
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
