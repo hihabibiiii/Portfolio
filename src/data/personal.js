@@ -83,23 +83,34 @@ export const personal = {
 
 export const seo = {
   home: {
-    title: "Habibullah Salmani | Web Developer Portfolio",
+    title:
+      "Habibullah Salmani | Data Scientist & Full Stack Developer",
+
     description:
-      "Habibullah Salmani - Web Developer skilled in HTML, CSS, JavaScript, Python, FastAPI. View portfolio, projects and contact details.",
+      "Habibullah Salmani is a Data Scientist and Full Stack Developer from India specializing in Python, Machine Learning, AI, React, JavaScript, FastAPI and data-driven web applications.",
   },
+
   about: {
-    title: "About | Habibullah Salmani",
+    title:
+      "About Habibullah Salmani | Data Scientist & Full Stack Developer",
+
     description:
-      "About Habibullah Salmani - Web Developer with expertise in frontend, backend and API development.",
+      "Learn about Habibullah Salmani, a Data Scientist and Full Stack Developer with a Diploma in Computer Science, specializing in Python, Machine Learning, AI and modern web development.",
   },
+
   projects: {
-    title: "Projects | Habibullah Salmani",
+    title:
+      "Projects | Machine Learning, AI & Full Stack Development | Habibullah Salmani",
+
     description:
-      "Selected projects in Data Science, Machine Learning and Full Stack Development by Habibullah Salmani.",
+      "Explore Habibullah Salmani's Data Science, Machine Learning, AI and Full Stack Development projects including prediction systems, recommendation systems, NLP, RAG and web applications.",
   },
+
   contact: {
-    title: "Contact | Habibullah Salmani",
+    title:
+      "Contact Habibullah Salmani | Data Scientist & Full Stack Developer",
+
     description:
-      "Contact Habibullah Salmani for web development projects, collaborations, and freelance work.",
+      "Contact Habibullah Salmani for Data Science, Machine Learning, AI, Full Stack Development, web development projects, collaborations and freelance opportunities.",
   },
 };
