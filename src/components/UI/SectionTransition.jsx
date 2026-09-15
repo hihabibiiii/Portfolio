@@ -1,12 +1,12 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-export default function SectionTransition({ children, className = "" }) {
+export default function SectionTransition({ children, className = '' }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 28 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
       className={className}
     >
       {children}

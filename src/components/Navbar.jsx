@@ -1,37 +1,54 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { navigation, personal } from "../data/personal";
+import { AnimatePresence, motion } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { navigation, personal } from '../data/personal';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-30 border-b border-white/10 bg-slate-950/50 backdrop-blur-2xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link to="/" className="font-display text-sm font-bold tracking-[0.28em] text-sky-100">
+    <header
+      className={`fixed inset-x-0 top-0 z-30 border-b border-border transition-all duration-300 ${
+        scrolled ? 'bg-bg/90 backdrop-blur-xl' : 'bg-transparent backdrop-blur-sm'
+      }`}
+    >
+      <div className="container-main flex items-center justify-between py-4">
+        <Link
+          to="/"
+          className="font-display text-sm font-bold tracking-[0.15em] text-primary transition-colors hover:text-accent"
+        >
           {personal.brand}
         </Link>
 
-        <nav className="hidden items-center gap-2 md:flex">
-          {navigation.map((item) => (
+        <nav className="hidden items-center gap-8 md:flex">
+          {navigation.filter(n => n.path !== '/contact').map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
-                `nav-link ${isActive ? "nav-link-active" : ""}`
+                `nav-link ${isActive ? 'nav-link-active' : ''}`
               }
             >
               {item.label}
             </NavLink>
           ))}
+          <Link to="/contact" className="btn-primary !py-2 !px-5 !text-xs">
+            Contact
+          </Link>
         </nav>
 
         <button
           type="button"
-          onClick={() => setIsOpen((value) => !value)}
-          className="inline-flex rounded-full border border-white/10 bg-white/5 p-3 text-slate-100 transition hover:border-sky-300/30 md:hidden"
+          onClick={() => setIsOpen((v) => !v)}
+          className="inline-flex items-center justify-center rounded-lg border border-border p-2.5 text-primary transition hover:bg-elevated md:hidden"
           aria-label="Toggle navigation"
         >
           {isOpen ? <X size={18} /> : <Menu size={18} />}
@@ -39,24 +56,25 @@ export default function Navbar() {
       </div>
 
       <AnimatePresence>
-        {isOpen ? (
+        {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
+            animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="border-t border-white/10 bg-slate-950/90 px-4 py-4 md:hidden"
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="border-t border-border bg-bg/95 backdrop-blur-xl md:hidden"
           >
-            <div className="flex flex-col gap-2">
+            <div className="container-main flex flex-col gap-1 py-4">
               {navigation.map((item) => (
                 <NavLink
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
-                    `rounded-2xl px-4 py-3 text-sm font-medium transition ${
+                    `rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
                       isActive
-                        ? "bg-sky-400/10 text-sky-200"
-                        : "text-slate-300 hover:bg-white/5 hover:text-white"
+                        ? 'bg-elevated text-accent'
+                        : 'text-secondary hover:bg-elevated hover:text-primary'
                     }`
                   }
                 >
@@ -65,7 +83,7 @@ export default function Navbar() {
               ))}
             </div>
           </motion.div>
-        ) : null}
+        )}
       </AnimatePresence>
     </header>
   );

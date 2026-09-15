@@ -1,15 +1,15 @@
-import { motion } from "framer-motion";
-import { Github, Instagram, Linkedin, Mail, MapPin, Twitter } from "lucide-react";
-import Breadcrumbs from "../components/Breadcrumbs";
-import SectionHeading from "../components/UI/SectionHeading";
-import SectionTransition from "../components/UI/SectionTransition";
-import Seo from "../components/UI/Seo";
-import { personal, seo } from "../data/personal";
+import { motion } from 'framer-motion';
+import { ArrowUpRight, Github, Instagram, Linkedin, Mail, MapPin, Twitter } from 'lucide-react';
+import Breadcrumbs from '../components/Breadcrumbs';
+import SectionHeading from '../components/UI/SectionHeading';
+import SectionTransition from '../components/UI/SectionTransition';
+import Seo from '../components/UI/Seo';
+import { personal, seo } from '../data/personal';
 
 const socialIcons = {
   GitHub: Github,
   LinkedIn: Linkedin,
-  "Twitter / X": Twitter,
+  'Twitter / X': Twitter,
   Instagram: Instagram,
 };
 
@@ -19,127 +19,106 @@ export default function Contact() {
       <Seo title={seo.contact.title} description={seo.contact.description} />
       <Breadcrumbs />
 
-      <section className="space-y-6">
-        <SectionHeading eyebrow="Contact" title="Contact" description={personal.contactSubtitle} />
+      <section>
+        <div className="container-main">
+          {/* Big headline */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-2xl"
+          >
+            <span className="eyebrow">Contact</span>
+            <h1 className="heading-xl mt-4">Have a project<br />in mind?</h1>
+            <p className="body-lg mt-6 max-w-lg">{personal.contactIntro}</p>
+          </motion.div>
 
-        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <SectionTransition className="section-shell">
-            <p className="text-sm leading-8 text-slate-200 sm:text-base">{personal.contactIntro}</p>
-
-            <div className="mt-8 space-y-4">
-              <div className="rounded-3xl border border-white/10 bg-slate-950/45 p-5">
-                <div className="flex items-center gap-3 text-sky-200">
-                  <Mail size={18} />
-                  <p className="text-xs uppercase tracking-[0.28em] text-slate-400">Email</p>
-                </div>
+          <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_1fr]">
+            {/* Contact details */}
+            <SectionTransition>
+              <div className="space-y-4">
+                {/* Email */}
                 <a
                   href={`mailto:${personal.email}`}
-                  className="mt-3 block text-lg font-medium text-white transition hover:text-cyan-200"
+                  className="card group flex items-center justify-between p-5 transition-colors hover:border-secondary/30"
                 >
-                  {personal.email}
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-elevated">
+                      <Mail size={18} className="text-accent" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted">Email</p>
+                      <p className="mt-0.5 text-sm font-medium text-primary">{personal.email}</p>
+                    </div>
+                  </div>
+                  <ArrowUpRight size={16} className="text-muted transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent" />
                 </a>
-              </div>
 
-              <div className="rounded-3xl border border-white/10 bg-slate-950/45 p-5">
-                <div className="flex items-center gap-3 text-sky-200">
-                  <Github size={18} />
-                  <p className="text-xs uppercase tracking-[0.28em] text-slate-400">GitHub</p>
-                </div>
+                {/* GitHub */}
                 <a
                   href="https://github.com/hihabibiiii"
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-3 block text-lg font-medium text-white transition hover:text-cyan-200"
+                  className="card group flex items-center justify-between p-5 transition-colors hover:border-secondary/30"
                 >
-                  github.com/hihabibiiii
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-elevated">
+                      <Github size={18} className="text-accent" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted">GitHub</p>
+                      <p className="mt-0.5 text-sm font-medium text-primary">github.com/hihabibiiii</p>
+                    </div>
+                  </div>
+                  <ArrowUpRight size={16} className="text-muted transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent" />
                 </a>
-              </div>
 
-              <div className="rounded-3xl border border-white/10 bg-slate-950/45 p-5">
-                <div className="flex items-center gap-3 text-sky-200">
-                  <MapPin size={18} />
-                  <p className="text-xs uppercase tracking-[0.28em] text-slate-400">Location</p>
+                {/* Location */}
+                <div className="card flex items-center gap-4 p-5">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-elevated">
+                    <MapPin size={18} className="text-accent" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted">Location</p>
+                    <p className="mt-0.5 text-sm font-medium text-primary">{personal.location}</p>
+                  </div>
                 </div>
-                <p className="mt-3 text-lg font-medium text-white">{personal.location}</p>
               </div>
-            </div>
+            </SectionTransition>
 
-            <div className="mt-8 grid grid-cols-2 gap-3">
-              {personal.social
-                .filter((item) => socialIcons[item.label])
-                .map((item) => {
-                  const Icon = socialIcons[item.label];
-
-                  return (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-200 transition hover:border-sky-300/30 hover:bg-white/10 hover:shadow-glow"
-                    >
-                      <Icon size={16} />
-                      <span>{item.label}</span>
-                    </a>
-                  );
-                })}
-            </div>
-          </SectionTransition>
-
-          <SectionTransition className="section-shell">
-            <motion.form
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.45 }}
-              action={`mailto:${personal.email}`}
-              method="post"
-              encType="text/plain"
-              className="space-y-5"
-            >
+            {/* Social links */}
+            <SectionTransition>
               <div>
-                <p className="text-xs uppercase tracking-[0.32em] text-cyan-200">Quick Message</p>
-                <h3 className="mt-3 text-2xl font-semibold text-white">Send Email</h3>
+                <h3 className="eyebrow mb-6">Social</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {personal.social
+                    .filter((item) => socialIcons[item.label])
+                    .map((item) => {
+                      const Icon = socialIcons[item.label];
+                      return (
+                        <a
+                          key={item.label}
+                          href={item.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="card group flex items-center gap-3 p-4 transition-colors hover:border-secondary/30"
+                        >
+                          <Icon size={16} className="text-muted group-hover:text-accent transition-colors" />
+                          <span className="text-sm text-secondary group-hover:text-primary transition-colors">{item.label}</span>
+                        </a>
+                      );
+                    })}
+                </div>
+
+                <div className="mt-8">
+                  <a href={`mailto:${personal.email}`} className="btn-primary w-full justify-center">
+                    <Mail size={16} />
+                    Send Email
+                  </a>
+                </div>
               </div>
-
-              <label className="block text-sm text-slate-200">
-                <span className="mb-2 block">Name</span>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Your name"
-                  className="w-full rounded-2xl border border-white/10 bg-slate-950/55 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/40 focus:shadow-glow"
-                />
-              </label>
-
-              <label className="block text-sm text-slate-200">
-                <span className="mb-2 block">Your Email</span>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="you@example.com"
-                  className="w-full rounded-2xl border border-white/10 bg-slate-950/55 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/40 focus:shadow-glow"
-                />
-              </label>
-
-              <label className="block text-sm text-slate-200">
-                <span className="mb-2 block">Message</span>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  placeholder="Write your message..."
-                  className="w-full rounded-2xl border border-white/10 bg-slate-950/55 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/40 focus:shadow-glow"
-                />
-              </label>
-
-              <button type="submit" className="primary-button">
-                Send Email
-              </button>
-            </motion.form>
-          </SectionTransition>
+            </SectionTransition>
+          </div>
         </div>
       </section>
     </>
