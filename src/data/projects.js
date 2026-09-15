@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: "House Price Prediction Model",
-    image: "/projects/house_prediction.png",
+    image: "/projects/house_prediction.webp",
     tagline: "Machine learning · Regression",
     category: "Machine Learning",
     description: "Built a regression model to predict house prices using a housing dataset. Includes data cleaning, feature engineering, model training and evaluation.",
@@ -12,7 +12,7 @@ export const projects = [
   },
   {
     title: "Movie Recommendation System",
-    image: "/projects/movie_reccommend.png",
+    image: "/projects/movie_reccommend.webp",
     tagline: "Recommendation engine · Python",
     category: "Machine Learning",
     description: "Developed a movie recommendation system in Python that suggests relevant movies based on user preferences and similarity logic. The project includes data processing, recommendation algorithms, and a simple interface.",
@@ -23,7 +23,7 @@ export const projects = [
   },
   {
     title: "Rock vs Mine Prediction Web App",
-    image: "/projects/rock_and_mine.png",
+    image: "/projects/rock_and_mine.webp",
     tagline: "Machine Learning · Classification · Streamlit",
     category: "Machine Learning",
     description: "Built a Machine Learning-based classification system that predicts whether an object detected by SONAR signals is a Rock or a Mine. The model is deployed as an interactive Streamlit web application for real-time predictions.",
@@ -34,7 +34,7 @@ export const projects = [
   },
   {
     title: "Fake News Detection System",
-    image: "/projects/fake_news_detection.png",
+    image: "/projects/fake_news_detection.webp",
     tagline: "NLP · Machine Learning · Text Classification",
     category: "NLP",
     description: "Developed a Fake News Detection system using Natural Language Processing (NLP) and Machine Learning to classify news articles as real or fake. Uses TF-IDF vectorization and a Logistic Regression model.",
@@ -45,7 +45,7 @@ export const projects = [
   },
   {
     title: "Diabetes Prediction Web App",
-    image: "/projects/health_prediction.png",
+    image: "/projects/health_prediction.webp",
     tagline: "Machine Learning · Classification · Streamlit",
     category: "Machine Learning",
     description: "Developed a Machine Learning-based system that predicts whether a person is diabetic based on medical input parameters. The trained model is deployed as an interactive Streamlit web application.",
@@ -55,7 +55,7 @@ export const projects = [
   },
   {
     title: "Telegram Food Ordering Bot",
-    image: "/projects/teligram_auto_food_ordering.png",
+    image: "/projects/teligram_auto_food_ordering.webp",
     tagline: "Telegram Bot · Python · Automation",
     category: "Other",
     description: "Built a fully functional Telegram-based food ordering bot using Python and python-telegram-bot. Allows users to browse a menu, place orders, and instantly notifies the owner with complete order details.",
@@ -66,7 +66,7 @@ export const projects = [
   },
   {
     title: "Customer Churn Prediction System",
-    image: "/projects/customer-churn-prediction-system.png",
+    image: "/projects/customer-churn-prediction-system.webp",
     tagline: "Machine Learning · Python · Streamlit",
     category: "Machine Learning",
     description: "Developed an end-to-end Machine Learning system to predict customer churn based on service usage and billing information. Includes data preprocessing, model training using Random Forest, and a Streamlit web app.",
@@ -76,7 +76,7 @@ export const projects = [
   },
   {
     title: "Patient Readmission Risk Prediction",
-    image: "/projects/patient-readmission-risk-prediction.png",
+    image: "/projects/patient-readmission-risk-prediction.webp",
     tagline: "Machine Learning · Healthcare · Python",
     category: "Machine Learning",
     description: "Developed a Machine Learning system to predict 30-day hospital readmission risk for diabetic patients. Focuses on identifying high-risk patients before discharge and deployed as a Streamlit web application.",
@@ -86,7 +86,7 @@ export const projects = [
   },
   {
     title: "Credit Card Fraud Detection System",
-    image: "/projects/credit-card-fraud-detection-system.png",
+    image: "/projects/credit-card-fraud-detection-system.webp",
     tagline: "Machine Learning · Data Science · Python",
     category: "Machine Learning",
     description: "Built a Machine Learning-based credit card fraud detection system to identify fraudulent transactions from highly imbalanced real-world data. Includes handling class imbalance using SMOTE and model training.",
@@ -97,7 +97,7 @@ export const projects = [
   },
   {
     title: "E-Commerce Loss Prediction System",
-    image: "/projects/e-commerce-loss-prediction-system.png",
+    image: "/projects/e-commerce-loss-prediction-system.webp",
     tagline: "Machine Learning · FastAPI · Full-Stack",
     category: "Full Stack",
     description: "Developed an end-to-end Machine Learning system to predict whether an e-commerce order will result in financial loss before shipping. Includes a production-ready FastAPI backend and a live frontend.",
@@ -107,7 +107,7 @@ export const projects = [
   },
   {
     title: "Medicine Demand Prediction System",
-    image: "/projects/medicine-demand-prediction-system.png",
+    image: "/projects/medicine-demand-prediction-system.webp",
     tagline: "Data Science · Machine Learning · Full-Stack",
     category: "Full Stack",
     description: "Developed an end-to-end Machine Learning system to predict future medicine demand using historical healthcare data. A full-stack application where models generate predictions through a FastAPI backend.",
@@ -117,7 +117,7 @@ export const projects = [
   },
   {
     title: "Predictive Maintenance System",
-    image: "/projects/predictive-maintenance-system.png",
+    image: "/projects/predictive-maintenance-system.webp",
     tagline: "Machine Learning · Data Science · Python",
     category: "Machine Learning",
     description: "Developed a Machine Learning-based predictive maintenance system to forecast potential machine failures using industrial sensor data. Analyzes equipment patterns and provides real-time predictions.",
@@ -127,7 +127,7 @@ export const projects = [
   },
   {
     title: "AI Crime Arrest Prediction System",
-    image: "/projects/ai-crime-arrest-prediction-system.png",
+    image: "/projects/ai-crime-arrest-prediction-system.webp",
     tagline: "AI · Machine Learning · Full-Stack",
     category: "Full Stack",
     description: "Developed an AI-powered crime analytics system that predicts the probability of arrest based on crime details and contextual factors. Integrates a high-performance ML model with a FastAPI backend and a React frontend dashboard.",
@@ -138,7 +138,7 @@ export const projects = [
   },
   {
     title: "Fraud Detection in Financial Transactions",
-    image: "/projects/fraud-detection-in-financial-transactions.png",
+    image: "/projects/fraud-detection-in-financial-transactions.webp",
     tagline: "Machine Learning · Data Science · Python",
     category: "Machine Learning",
     description: "Developed an end-to-end Machine Learning system to detect fraudulent financial transactions using highly imbalanced real-world data. Deployed as an interactive Streamlit web application for real-time fraud prediction.",
@@ -148,7 +148,7 @@ export const projects = [
   },
   {
     title: "Smart Book Recommender",
-    image: "/projects/smart-book-recommender.png",
+    image: "/projects/smart-book-recommender.webp",
     tagline: "Recommendation System · NLP · Python",
     category: "NLP",
     description: "Built a content-based book recommendation system using TF-IDF and cosine similarity to suggest similar books based on user input. Features an interactive Streamlit interface with real-time search.",
@@ -158,7 +158,7 @@ export const projects = [
   },
   {
     title: "Student Management System",
-    image: "/projects/student-management-system.png",
+    image: "/projects/student-management-system.webp",
     tagline: "Full-Stack · Flask · Web Application",
     category: "Full Stack",
     description: "Developed a modern Student Management System using Flask and SQLite with a clean cyber-style UI. Enables secure admin authentication, student record management, and fee tracking.",
@@ -169,7 +169,7 @@ export const projects = [
   },
   {
     title: "Run & Chase - Endless Runner Game",
-    image: "/projects/run-and-chase-endless-runner-game.png",
+    image: "/projects/run-and-chase-endless-runner-game.webp",
     tagline: "Game Development · JavaScript · Web",
     category: "Other",
     description: "Developed a dynamic browser-based endless runner game with smooth animations, physics-based jumping, and real-time gameplay mechanics. Features customizable assets, a chaser AI system, and obstacle generation.",
