@@ -46,7 +46,7 @@ export const personal = {
   email: 'hshabibullah@gmail.com',
   social: [
     { label: 'GitHub', href: 'https://github.com/hihabibiiii' },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/habibullah-salmani-49385928b/' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/habibullah-salmani-49385928b' },
     { label: 'Twitter / X', href: 'https://x.com/HabibullahHs' },
     { label: 'Instagram', href: 'https://instagram.com/hihabibiiii' },
     { label: 'Email', href: 'mailto:hshabibullah@gmail.com?subject=Website%20Inquiry&body=Hello%20Habibullah,' },
