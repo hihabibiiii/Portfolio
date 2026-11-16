@@ -7,7 +7,9 @@ import Navbar from './components/Navbar';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 import Projects from './pages/Projects';
+import Skills from './pages/Skills';
 
 const pageVariants = {
   initial: { opacity: 0, y: 12 },
@@ -33,11 +35,11 @@ export default function App() {
   }, []);
 
   return (
-    <div className="noise-bg relative min-h-screen bg-bg text-primary">
-      {/* Subtle grid background */}
+    <div className="noise-bg relative min-h-screen bg-bg text-primary overflow-x-hidden">
+      {/* Subtle luxury gold grid background */}
       <div className="pointer-events-none fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="absolute left-1/2 top-0 h-[600px] w-[800px] -translate-x-1/2 bg-[radial-gradient(ellipse,rgba(199,255,61,0.04),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(212,175,55,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(212,175,55,0.015)_1px,transparent_1px)] bg-[size:64px_64px]" />
+        <div className="absolute left-1/2 top-0 h-[650px] w-[900px] -translate-x-1/2 bg-[radial-gradient(ellipse,rgba(212,175,55,0.04),transparent_70%)]" />
       </div>
 
       <AnimatePresence mode="wait">
@@ -58,8 +60,10 @@ export default function App() {
                   {[
                     { path: '/', Page: Home },
                     { path: '/about', Page: About },
+                    { path: '/skills', Page: Skills },
                     { path: '/projects', Page: Projects },
                     { path: '/contact', Page: Contact },
+                    { path: '*', Page: NotFound },
                   ].map(({ path, Page }) => (
                     <Route
                       key={path}

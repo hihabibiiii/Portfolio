@@ -1,18 +1,22 @@
 export const skillGroups = [
   {
-    title: 'Development',
-    items: ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind', 'Node.js', 'Express', 'FAST API', 'Flask'],
+    title: 'Data Science & AI',
+    description: 'Statistical modeling, predictive algorithms, and machine learning pipelines.',
+    items: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Matplotlib', 'TF-IDF', 'NLP', 'Data Preprocessing', 'Model Evaluation'],
   },
   {
-    title: 'Data / AI',
-    items: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Matplotlib', 'TF-IDF', 'NLP'],
+    title: 'Full Stack Development',
+    description: 'Component-driven reactive user interfaces and modern web architectures.',
+    items: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Vite', 'Framer Motion', 'Responsive UI'],
   },
   {
-    title: 'Backend / Database',
-    items: ['FastAPI', 'Flask', 'MongoDB', 'MySQL', 'SQLite', 'REST APIs'],
+    title: 'Backend & Database',
+    description: 'Robust RESTful API design, server-side business logic, and database schemas.',
+    items: ['FastAPI', 'Flask', 'Node.js', 'Express', 'MongoDB', 'MySQL', 'SQLite', 'REST APIs'],
   },
   {
     title: 'Tools & Deployment',
-    items: ['Git', 'GitHub', 'VS Code', 'Streamlit', 'Render', 'Netlify', 'Vite'],
+    description: 'Version control, developer workflows, and cloud hosting pipelines.',
+    items: ['Git', 'GitHub', 'Streamlit', 'Render', 'Netlify', 'Postman', 'VS Code', 'Linux CLI'],
   },
 ];

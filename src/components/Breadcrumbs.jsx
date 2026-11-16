@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 const labels = {
   about: 'About',
+  skills: 'Skills',
   projects: 'Projects',
   contact: 'Contact',
 };
@@ -28,12 +29,12 @@ export default function Breadcrumbs() {
 
         return (
           <div key={href} className="inline-flex items-center gap-2">
-            <ChevronRight size={12} />
+            <ChevronRight size={12} className="text-border" />
             {isLast ? (
-              <span className="text-primary">{labels[segment]}</span>
+              <span className="font-medium text-accent">{labels[segment] || segment}</span>
             ) : (
               <Link to={href} className="transition-colors hover:text-primary">
-                {labels[segment]}
+                {labels[segment] || segment}
               </Link>
             )}
           </div>

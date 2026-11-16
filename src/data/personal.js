@@ -1,6 +1,7 @@
 export const navigation = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
+  { label: 'Skills', path: '/skills' },
   { label: 'Projects', path: '/projects' },
   { label: 'Contact', path: '/contact' },
 ];
@@ -8,11 +9,13 @@ export const navigation = [
 export const personal = {
   name: 'Habibullah Salmani',
   brand: 'HABIBULLAH SALMANI',
+  shortBrand: 'HS',
   role: 'Data Scientist & Full Stack Developer',
-  heroEyebrow: 'DEVELOPER · DATA SCIENCE · AI',
-  heroTitle: 'I build data products,\nML systems & full-stack\napplications.',
+  heroEyebrow: 'DATA SCIENTIST & FULL STACK DEVELOPER',
+  heroTitle: 'Habibullah Salmani',
+  heroRole: 'Data Scientist & Full Stack Developer',
   heroIntro: 'Data Scientist and Full Stack Developer specializing in machine learning models, data-driven solutions, and modern web applications. From data preprocessing to deployment — I build end-to-end.',
-  heroNote: 'Completed Data Scientist course. Open to opportunities in Data Science, ML, and Full Stack Development.',
+  heroNote: 'Open to opportunities in Data Science, ML & Full Stack Development.',
   aboutSubtitle: 'Data Scientist & Full Stack Developer with a foundation in Computer Science, Python, and real-world project building.',
   aboutParagraphs: [
     'I have completed a Data Scientist course and hold a Diploma in Computer Science from J S University, Sikohabad (Uttar Pradesh). I work with Python, C++ and web technologies to build applications that connect clean user interfaces with solid backend and data logic.',
@@ -37,11 +40,12 @@ export const personal = {
     { step: '03', title: 'Test', description: 'Validate results, evaluate metrics, iterate.' },
     { step: '04', title: 'Deploy', description: 'Ship to production, monitor, maintain.' },
   ],
+  skillsSubtitle: 'Production-ready technical stack spanning statistical modeling, machine learning pipelines, modern frontends, and scalable APIs.',
   homeProjectsSubtitle: 'Selected work in data science, machine learning, and full-stack development.',
   projectsSubtitle: 'Selected projects in Data Science, Machine Learning and Full Stack Development.',
-  contactSubtitle: 'Have a project in mind? I\'m open to roles in Data Science, ML, and Full Stack Development.',
+  contactSubtitle: "Have a project in mind? I'm open to roles in Data Science, ML, and Full Stack Development.",
   contactIntro: 'I am open to roles in Data Science, Machine Learning and Full Stack Development. If you think I could be a good fit for your team or project, reach out below.',
-  footerText: 'Designed & built with React.',
+  footerText: 'Crafted with precision using React & Tailwind CSS.',
   location: 'India',
   email: 'hshabibullah@gmail.com',
   social: [
@@ -62,9 +66,13 @@ export const seo = {
     title: 'About Habibullah Salmani | Data Scientist & Full Stack Developer',
     description: 'Learn about Habibullah Salmani, a Data Scientist and Full Stack Developer with a Diploma in Computer Science, specializing in Python, Machine Learning, AI and modern web development.',
   },
+  skills: {
+    title: 'Skills & Technical Stack | Habibullah Salmani',
+    description: 'Technical skills and proficiencies of Habibullah Salmani across Data Science, Machine Learning, Python, React, FastAPI, SQL, and Full Stack Development.',
+  },
   projects: {
     title: 'Projects | Machine Learning, AI & Full Stack Development | Habibullah Salmani',
-    description: 'Explore Habibullah Salmani\'s Data Science, Machine Learning, AI and Full Stack Development projects including prediction systems, recommendation systems, NLP, RAG and web applications.',
+    description: "Explore Habibullah Salmani's Data Science, Machine Learning, AI and Full Stack Development projects including prediction systems, recommendation systems, NLP, RAG and web applications.",
   },
   contact: {
     title: 'Contact Habibullah Salmani | Data Scientist & Full Stack Developer',
