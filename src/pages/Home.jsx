@@ -45,6 +45,8 @@ const techTicker = [
   'NLP & TF-IDF',
 ];
 
+const marqueeList = [...techTicker, ...techTicker];
+
 const heroMetrics = [
   { value: '17+', label: 'Shipped Projects', sub: 'ML, NLP & Web' },
   { value: 'End-to-End', label: 'Architecture', sub: 'Data to Deployment' },
@@ -122,6 +124,7 @@ const photoFrameReveal = {
 
 export default function Home() {
   const [imgError, setImgError] = useState(false);
+  const [isMarqueePaused, setIsMarqueePaused] = useState(false);
 
   return (
     <>
@@ -327,19 +330,53 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ─── CONTINUOUS TECH TICKER STRIP ─── */}
-      <section className="border-y border-border/80 bg-card/60 py-4 overflow-hidden">
-        <div className="container-main flex items-center justify-between gap-6 overflow-x-auto no-scrollbar py-1">
-          {techTicker.map((item, idx) => (
-            <div key={item} className="flex items-center gap-6 flex-shrink-0">
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary/80 hover:text-accent transition-colors cursor-default">
-                {item}
-              </span>
-              {idx !== techTicker.length - 1 && (
-                <span className="text-accent/40 font-mono text-xs">/</span>
-              )}
-            </div>
-          ))}
+      {/* ─── CONTINUOUS TECH TICKER MARQUEE ─── */}
+      <section
+        className="relative w-full border-y border-border/80 bg-card/60 py-4 overflow-hidden select-none"
+        onMouseEnter={() => setIsMarqueePaused(true)}
+        onMouseLeave={() => setIsMarqueePaused(false)}
+        onTouchStart={() => setIsMarqueePaused(true)}
+        onTouchEnd={() => setIsMarqueePaused(false)}
+        aria-label="Core Technology Stack"
+      >
+        {/* Subtle Edge Vignettes for Seamless Luxury Fade */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-12 sm:w-24 bg-gradient-to-r from-bg to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-12 sm:w-24 bg-gradient-to-l from-bg to-transparent" />
+
+        {/* Marquee Animation Track */}
+        <div
+          className="flex w-max animate-marquee"
+          style={{
+            animationPlayState: isMarqueePaused ? 'paused' : 'running',
+          }}
+        >
+          {/* Primary Track Set */}
+          <div className="flex items-center shrink-0">
+            {marqueeList.map((item, idx) => (
+              <div key={`track-a-${item}-${idx}`} className="flex items-center shrink-0">
+                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary/80 transition-colors duration-200 hover:text-accent cursor-default">
+                  {item}
+                </span>
+                <span className="mx-6 text-accent/50 font-mono text-xs select-none" aria-hidden="true">
+                  /
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Seamless Duplicate Track for Infinite Loop */}
+          <div className="flex items-center shrink-0" aria-hidden="true">
+            {marqueeList.map((item, idx) => (
+              <div key={`track-b-${item}-${idx}`} className="flex items-center shrink-0">
+                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary/80 transition-colors duration-200 hover:text-accent cursor-default">
+                  {item}
+                </span>
+                <span className="mx-6 text-accent/50 font-mono text-xs select-none">
+                  /
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
