@@ -9,6 +9,7 @@ import {
   Github,
   Linkedin,
   Mail,
+  Smartphone,
   Sparkles,
   Wrench,
 } from 'lucide-react';
@@ -21,13 +22,14 @@ import { personal, seo } from '../data/personal';
 import { projects } from '../data/projects';
 import { skillGroups } from '../data/skills';
 
-const featuredProjects = projects.filter((p) => p.featured).slice(0, 4);
+const featuredProjects = projects.filter((p) => p.featured).slice(0, 6);
 
 const domainIcons = {
   'Data Science & AI': Cpu,
   'Full Stack Development': Code2,
   'Backend & Database': Database,
   'Tools & Deployment': Wrench,
+  'Android & App Development': Smartphone,
 };
 
 const techTicker = [
@@ -48,7 +50,7 @@ const techTicker = [
 const marqueeList = [...techTicker, ...techTicker];
 
 const heroMetrics = [
-  { value: '17+', label: 'Shipped Projects', sub: 'ML, NLP & Web' },
+  { value: '19+', label: 'Shipped Projects', sub: 'ML, Web & Android' },
   { value: 'End-to-End', label: 'Architecture', sub: 'Data to Deployment' },
   { value: '2025', label: 'Certified', sub: 'CS & Data Science' },
   { value: '100%', label: 'Commitment', sub: 'Clean, Tested Code' },
@@ -460,7 +462,7 @@ export default function Home() {
 
         <div className="container-main mt-14">
           <SectionTransition>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {skillGroups.map((group, gi) => {
                 const Icon = domainIcons[group.title] || Code2;
                 return (

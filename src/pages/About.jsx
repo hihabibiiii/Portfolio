@@ -336,7 +336,7 @@ export default function About() {
         />
 
         <div className="container-main mt-14">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {skillGroups.map((group, gi) => (
               <motion.div
                 key={group.title}

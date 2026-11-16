@@ -15,7 +15,14 @@ import Seo from '../components/UI/Seo';
 import { personal, seo } from '../data/personal';
 import { projects } from '../data/projects';
 
-const categories = ['All', 'Machine Learning', 'Full Stack', 'NLP', 'Other'];
+const categories = [
+  'All',
+  'Android App Development',
+  'Machine Learning',
+  'Full Stack',
+  'NLP',
+  'Other',
+];
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All');

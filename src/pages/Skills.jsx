@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Code2, Cpu, Database, Wrench, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Code2, Cpu, Database, Smartphone, Wrench, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SectionHeading from '../components/UI/SectionHeading';
@@ -13,12 +13,17 @@ const groupIcons = {
   'Full Stack Development': Code2,
   'Backend & Database': Database,
   'Tools & Deployment': Wrench,
+  'Android & App Development': Smartphone,
 };
 
 const competencies = [
   {
     title: 'End-to-End Machine Learning',
     description: 'From exploratory data analysis and feature engineering to model training, hyperparameter tuning, and production inference.',
+  },
+  {
+    title: 'Native Android Development',
+    description: 'Developing offline-first, production-ready Android apps using Kotlin, Room Database, SQLite, Firebase, and Google Play Billing.',
   },
   {
     title: 'High-Performance REST APIs',

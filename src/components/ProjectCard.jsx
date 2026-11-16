@@ -5,6 +5,7 @@ import { ArrowUpRight, Clock, Code2, Github, Sparkles } from 'lucide-react';
 export default function ProjectCard({ project, index }) {
   const number = String(index + 1).padStart(2, '0');
   const [imgError, setImgError] = useState(false);
+  const isContain = project.objectFit === 'contain' || project.category === 'Android App Development';
 
   return (
     <motion.article
@@ -16,14 +17,18 @@ export default function ProjectCard({ project, index }) {
     >
       <div>
         {/* Consistent 16:10 Aspect Ratio Screenshot Housing */}
-        <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-border/80 bg-surface">
+        <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-border/80 bg-[#0c0d10]">
           {project.image && !imgError ? (
             <img
               src={project.image}
               alt={project.title}
               loading="lazy"
               onError={() => setImgError(true)}
-              className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+              className={`h-full w-full ${
+                isContain
+                  ? 'object-contain object-center'
+                  : 'object-cover object-top'
+              } transition-transform duration-700 ease-out group-hover:scale-[1.02]`}
             />
           ) : (
             /* Fallback Graphic */
@@ -37,8 +42,10 @@ export default function ProjectCard({ project, index }) {
             </div>
           )}
 
-          {/* Subtle Ambient Bottom Gradient */}
-          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-card via-card/40 to-transparent pointer-events-none" />
+          {/* Subtle Ambient Bottom Gradient (omitted for contained artwork to preserve complete graphics) */}
+          {!isContain && (
+            <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-card via-card/40 to-transparent pointer-events-none" />
+          )}
 
           {/* Top Badges: Category & Featured */}
           <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 pointer-events-none">
@@ -110,30 +117,39 @@ export default function ProjectCard({ project, index }) {
               <span>GitHub Code</span>
             </a>
           ) : (
-            <div />
+            <div className="flex items-center gap-1.5 text-[11px] font-mono text-muted">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent/60" />
+              <span>Android Application</span>
+            </div>
           )}
 
-          {/* Live Demo or Status */}
-          {project.live ? (
+          {/* Live Demo, Play Store or Coming Soon Status */}
+          {project.playStoreUrl || (project.live && project.live.length > 0) ? (
             <a
-              href={project.live}
+              href={project.playStoreUrl || project.live}
               target="_blank"
               rel="noreferrer"
               className="btn-primary !px-4 !py-2.5 !text-xs group/link gap-2"
               aria-label={`View live demo of ${project.title}`}
             >
-              <span>{project.liveLabel || 'Live Demo'}</span>
+              <span>{project.playStoreUrl ? 'Google Play' : (project.liveLabel || 'Live Demo')}</span>
               <ArrowUpRight
                 size={14}
                 className="transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
               />
             </a>
-          ) : project.status ? (
-            <div className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-surface px-3 py-2 text-[11px] font-medium text-muted">
-              <Clock size={13} className="text-accent/70" />
-              <span>{project.status}</span>
-            </div>
-          ) : null}
+          ) : (
+            <button
+              type="button"
+              disabled
+              className="inline-flex items-center gap-1.5 rounded-lg border border-accent/40 bg-accent/10 px-3.5 py-2 text-xs font-semibold text-accent cursor-not-allowed shadow-[0_0_12px_rgba(212,175,55,0.08)] opacity-95 transition-opacity"
+              aria-label={`${project.title} - Coming Soon`}
+              title="Coming Soon on Google Play Store"
+            >
+              <Clock size={13} className="text-accent" />
+              <span>{project.status || 'Coming Soon'}</span>
+            </button>
+          )}
         </div>
       </div>
     </motion.article>
