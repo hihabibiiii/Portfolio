@@ -1,7 +1,8 @@
 export const projects = [
   {
     title: "WorkCraft",
-    image: "/workcraft.webp",
+    image: "/workcraft.png",
+    objectFit: "contain",
     tagline: "Workforce & Site Management · Android App",
     category: "Android App Development",
     description: "A workforce management Android application designed to manage workers, attendance, construction sites, payments and contracts.",
@@ -26,7 +27,8 @@ export const projects = [
   },
   {
     title: "KhataGuru",
-    image: "/khataguru.webp",
+    image: "/khataguru.png",
+    objectFit: "contain",
     tagline: "Offline-First Accounting · Android App",
     category: "Android App Development",
     description: "An offline-first business accounting Android application designed to manage sales, purchases, inventory, customers, suppliers and daily financial transactions.",
