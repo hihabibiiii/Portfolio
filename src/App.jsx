@@ -37,9 +37,8 @@ export default function App() {
   return (
     <div className="noise-bg relative min-h-screen bg-bg text-primary overflow-x-hidden">
       {/* Subtle luxury gold grid background */}
-      <div className="pointer-events-none fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(212,175,55,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(212,175,55,0.015)_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="absolute left-1/2 top-0 h-[650px] w-[900px] -translate-x-1/2 bg-[radial-gradient(ellipse,rgba(212,175,55,0.04),transparent_70%)]" />
+      <div className="pointer-events-none fixed inset-0 z-0 bg-grid-pattern">
+        <div className="absolute left-1/2 top-0 h-[650px] w-[900px] -translate-x-1/2 bg-radial-glow" />
       </div>
 
       <AnimatePresence mode="wait">

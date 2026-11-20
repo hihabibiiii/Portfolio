@@ -16,7 +16,7 @@ export default function NotFound() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="card max-w-lg p-10 sm:p-14 border-accent/40 bg-card shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(212,175,55,0.1)]"
+          className="card max-w-lg p-10 sm:p-14 border-accent/40 bg-card shadow-card-hover dark:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(212,175,55,0.1)]"
         >
           <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-accent/40 bg-accent/10 text-accent">
             <Compass size={28} />

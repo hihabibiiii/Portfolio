@@ -1,25 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        bg: '#080808',
-        surface: '#111111',
-        card: '#191919',
-        elevated: '#191919',
-        primary: '#FAFAF7',
-        secondary: '#B7B7B2',
-        muted: '#737373',
-        border: '#2A2925',
-        accent: '#D4AF37',
-        'accent-light': '#F1D78A',
-        gold: {
-          DEFAULT: '#D4AF37',
-          light: '#F1D78A',
-          dark: '#AA8822',
+        bg: 'rgb(var(--color-bg) / <alpha-value>)',
+        surface: 'rgb(var(--color-surface) / <alpha-value>)',
+        card: 'rgb(var(--color-card) / <alpha-value>)',
+        elevated: 'rgb(var(--color-elevated) / <alpha-value>)',
+        primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+        muted: 'rgb(var(--color-muted) / <alpha-value>)',
+        border: 'rgb(var(--color-border) / <alpha-value>)',
+        accent: {
+          DEFAULT: 'rgb(var(--color-accent) / <alpha-value>)',
+          light: 'rgb(var(--color-accent-light) / <alpha-value>)',
+          dark: 'rgb(var(--color-accent-dark) / <alpha-value>)',
         },
-        champagne: '#F1D78A',
+        'accent-light': 'rgb(var(--color-accent-light) / <alpha-value>)',
+        gold: {
+          DEFAULT: 'rgb(var(--color-accent) / <alpha-value>)',
+          light: 'rgb(var(--color-accent-light) / <alpha-value>)',
+          dark: 'rgb(var(--color-accent-dark) / <alpha-value>)',
+        },
+        champagne: 'rgb(var(--color-champagne) / <alpha-value>)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
@@ -29,10 +34,10 @@ export default {
         container: '1320px',
       },
       boxShadow: {
-        'gold-sm': '0 2px 10px rgba(212, 175, 55, 0.1)',
-        'gold-md': '0 8px 30px rgba(212, 175, 55, 0.12)',
-        'card': '0 4px 20px rgba(0, 0, 0, 0.4)',
-        'card-hover': '0 12px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.08)',
+        'gold-sm': 'var(--shadow-gold-sm)',
+        'gold-md': 'var(--shadow-gold-md)',
+        'card': 'var(--shadow-card)',
+        'card-hover': 'var(--shadow-card-hover)',
       },
       keyframes: {
         marquee: {

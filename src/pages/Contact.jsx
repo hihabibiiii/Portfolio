@@ -106,7 +106,7 @@ Email: ${senderEmail || 'Not specified'}`;
             {/* ─── LEFT: PROFESSIONAL CONTACT CARDS ─── */}
             <SectionTransition className="lg:col-span-6 space-y-5">
               {/* Primary Email Card with Quick Copy */}
-              <div className="card group relative overflow-hidden p-6 sm:p-7 border-accent/30 shadow-[0_4px_24px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-accent/60">
+              <div className="card group relative overflow-hidden p-6 sm:p-7 border-accent/30 shadow-card dark:shadow-[0_4px_24px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-accent/60">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-center gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-accent/40 bg-accent/10 text-accent transition-all duration-300 group-hover:bg-accent/20">
@@ -268,7 +268,7 @@ Email: ${senderEmail || 'Not specified'}`;
 
             {/* ─── RIGHT: INTERACTIVE QUICK MESSAGE COMPOSER ─── */}
             <SectionTransition className="lg:col-span-6">
-              <div className="card relative overflow-hidden p-8 sm:p-9 border-accent/40 bg-card shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(212,175,55,0.08)]">
+              <div className="card relative overflow-hidden p-8 sm:p-9 border-accent/40 bg-card shadow-card-hover dark:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(212,175,55,0.08)]">
                 {/* Header */}
                 <div className="flex items-center justify-between border-b border-border/80 pb-5">
                   <div className="flex items-center gap-2.5 text-accent">

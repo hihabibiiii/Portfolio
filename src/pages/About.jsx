@@ -70,10 +70,10 @@ const journeyMilestones = [
   {
     period: '2025 — Present',
     tag: 'Applied Engineering',
-    title: '17+ End-to-End Shipped Projects',
+    title: '19 End-to-End Shipped Projects',
     institution: 'Applied Machine Learning & Web Architecture',
     details:
-      'Architected and shipped a diverse portfolio of 17+ projects spanning disease prediction, financial fraud detection, house valuation, NLP fake news classification, and full-stack applications.',
+      'Architected and shipped a diverse portfolio of 19 projects spanning disease prediction, financial fraud detection, house valuation, NLP fake news classification, and full-stack applications.',
     icon: Layers,
   },
 ];
@@ -111,7 +111,7 @@ export default function About() {
                 <div className="absolute -bottom-2.5 -right-2.5 h-10 w-10 rounded-br-lg border-b-2 border-r-2 border-accent" />
 
                 {/* Profile Image Frame */}
-                <div className="relative h-[390px] w-[260px] min-[380px]:h-[420px] min-[380px]:w-[280px] sm:h-[480px] sm:w-[320px] lg:h-[510px] lg:w-[340px] overflow-hidden rounded-2xl border-2 border-accent/40 bg-[#0c0f14] shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
+                <div className="relative h-[390px] w-[260px] min-[380px]:h-[420px] min-[380px]:w-[280px] sm:h-[480px] sm:w-[320px] lg:h-[510px] lg:w-[340px] overflow-hidden rounded-2xl border-2 border-accent/40 bg-surface dark:bg-[#0c0f14] shadow-card-hover dark:shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
                   {!imgError ? (
                     <img
                       src="/profie.png"
@@ -138,7 +138,7 @@ export default function About() {
                 </div>
 
                 {/* Bottom info strip positioned cleanly outside frame */}
-                <div className="absolute -bottom-4 inset-x-3 sm:-bottom-5 sm:inset-x-5 z-20 rounded-xl border border-accent/30 bg-[#080808]/95 p-3 sm:p-3.5 backdrop-blur-md shadow-[0_12px_28px_rgba(0,0,0,0.8)]">
+                <div className="absolute -bottom-4 inset-x-3 sm:-bottom-5 sm:inset-x-5 z-20 rounded-xl border border-accent/30 bg-bg/95 p-3 sm:p-3.5 backdrop-blur-md shadow-card dark:shadow-[0_12px_28px_rgba(0,0,0,0.8)]">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <MapPin size={14} className="text-accent" />
@@ -174,7 +174,7 @@ export default function About() {
               </div>
 
               {/* Engineering Philosophy Quote Callout */}
-              <div className="rounded-2xl border border-accent/30 bg-card p-6 shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
+              <div className="rounded-2xl border border-accent/30 bg-card p-6 shadow-card dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
                 <div className="flex items-start gap-3.5">
                   <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-accent/40 bg-accent/10 text-accent">
                     <Terminal size={18} />
@@ -193,7 +193,7 @@ export default function About() {
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link to="/projects" className="btn-primary">
-                  <span>Explore 17 Shipped Projects</span>
+                  <span>Explore All 19 Projects</span>
                   <ArrowRight size={16} />
                 </Link>
 
@@ -236,7 +236,7 @@ export default function About() {
                     }`}
                   >
                     {/* Center Node / Dot */}
-                    <div className="absolute left-4 -translate-x-1/2 sm:left-1/2 flex h-8 w-8 items-center justify-center rounded-full border-2 border-accent bg-[#080808] text-accent shadow-[0_0_15px_rgba(212,175,55,0.4)] z-10">
+                    <div className="absolute left-4 -translate-x-1/2 sm:left-1/2 flex h-8 w-8 items-center justify-center rounded-full border-2 border-accent bg-bg text-accent shadow-gold-sm dark:shadow-[0_0_15px_rgba(212,175,55,0.4)] z-10">
                       <Icon size={14} />
                     </div>
 
@@ -379,7 +379,7 @@ export default function About() {
 
       {/* ─── 5. COLLABORATION CTA ─── */}
       <section className="container-main mt-36">
-        <div className="relative overflow-hidden rounded-3xl border border-accent/30 bg-gradient-to-b from-card to-[#080808] p-8 sm:p-14 text-center">
+        <div className="relative overflow-hidden rounded-3xl border border-accent/30 bg-gradient-to-b from-card to-bg p-8 sm:p-14 text-center shadow-card-hover dark:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(212,175,55,0.08)]">
           <div className="mx-auto max-w-xl">
             <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
               <Sparkles size={18} />

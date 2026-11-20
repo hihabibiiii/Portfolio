@@ -66,7 +66,7 @@ export default function Projects() {
 
         {/* Filter & Search Bar Container */}
         <div className="container-main mt-12">
-          <div className="rounded-2xl border border-border bg-card p-6 shadow-[0_4px_24px_rgba(0,0,0,0.4)]">
+          <div className="rounded-2xl border border-border bg-card p-6 shadow-card dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)]">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               {/* Category Filter Pills */}
               <div className="flex flex-wrap items-center gap-2">
@@ -84,7 +84,7 @@ export default function Projects() {
                       onClick={() => setActiveCategory(cat)}
                       className={`relative flex items-center gap-2 rounded-lg px-4 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${
                         isSelected
-                          ? 'border border-accent/50 bg-accent text-[#080808] shadow-[0_0_15px_rgba(212,175,55,0.25)]'
+                          ? 'border border-accent/50 bg-accent text-white dark:text-[#080808] shadow-gold-sm dark:shadow-[0_0_15px_rgba(212,175,55,0.25)]'
                           : 'border border-border/80 bg-surface text-secondary hover:border-accent/40 hover:text-primary'
                       }`}
                     >
@@ -92,7 +92,7 @@ export default function Projects() {
                       <span
                         className={`rounded-full px-1.5 py-0.2 text-[10px] font-bold ${
                           isSelected
-                            ? 'bg-[#080808]/20 text-[#080808]'
+                            ? 'bg-black/20 text-white dark:text-[#080808]'
                             : 'bg-elevated text-muted'
                         }`}
                       >
@@ -169,7 +169,7 @@ export default function Projects() {
 
           {/* Empty State */}
           {filteredProjects.length === 0 && (
-            <div className="mt-16 rounded-2xl border border-border bg-card p-12 text-center shadow-[0_4px_24px_rgba(0,0,0,0.5)]">
+            <div className="mt-16 rounded-2xl border border-border bg-card p-12 text-center shadow-card dark:shadow-[0_4px_24px_rgba(0,0,0,0.5)]">
               <Layers className="mx-auto h-12 w-12 text-muted/60" />
               <h3 className="mt-4 font-display text-xl font-bold text-primary">
                 No matching projects found
@@ -188,7 +188,7 @@ export default function Projects() {
           )}
 
           {/* Bottom Collaboration Callout */}
-          <div className="mt-32 rounded-3xl border border-accent/40 bg-gradient-to-b from-card to-[#080808] p-8 sm:p-14 text-center shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(212,175,55,0.08)]">
+          <div className="mt-32 rounded-3xl border border-accent/40 bg-gradient-to-b from-card to-bg p-8 sm:p-14 text-center shadow-card-hover dark:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(212,175,55,0.08)]">
             <div className="mx-auto max-w-xl">
               <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-accent/40 bg-accent/10 text-accent">
                 <Sparkles size={20} />

@@ -135,7 +135,7 @@ export default function Home() {
       {/* ─── 1. HERO SECTION ─── */}
       <section className="container-main relative min-h-[88vh] flex items-center pt-2 pb-16 lg:pt-6 lg:pb-24 overflow-x-clip">
         {/* Subtle decorative background watermark */}
-        <div className="pointer-events-none absolute -left-10 top-1/4 select-none font-display text-[12rem] font-black tracking-tighter text-[#D4AF37]/[0.015] sm:text-[18rem] lg:text-[22rem]">
+        <div className="pointer-events-none absolute -left-10 top-1/4 select-none font-display text-[12rem] font-black tracking-tighter text-accent/[0.02] sm:text-[18rem] lg:text-[22rem]">
           HS
         </div>
 
@@ -160,7 +160,7 @@ export default function Home() {
 
             {/* Editorial Title with Masked Reveal */}
             <div className="mt-6 overflow-hidden">
-              <motion.h1 className="font-display text-5xl font-bold leading-[1.04] tracking-tight text-primary sm:text-6xl lg:text-[4.5rem]">
+              <motion.h1 className="font-display text-4xl min-[390px]:text-5xl font-bold leading-[1.04] tracking-tight text-primary sm:text-6xl lg:text-[4.5rem]">
                 <div className="overflow-hidden">
                   <motion.span variants={wordReveal} className="inline-block">
                     Habibullah
@@ -277,7 +277,7 @@ export default function Home() {
               <span className="absolute -bottom-7 -left-7 hidden text-[11px] font-mono text-accent/40 sm:block">+</span>
 
               {/* Main Photo Housing */}
-              <div className="relative h-[390px] w-[260px] min-[380px]:h-[420px] min-[380px]:w-[280px] sm:h-[480px] sm:w-[320px] lg:h-[510px] lg:w-[340px] overflow-hidden rounded-2xl border-2 border-accent/40 bg-[#0c0f14] shadow-[0_20px_60px_rgba(0,0,0,0.85),0_0_35px_rgba(212,175,55,0.12)]">
+              <div className="relative h-[390px] w-[260px] min-[380px]:h-[420px] min-[380px]:w-[280px] sm:h-[480px] sm:w-[320px] lg:h-[510px] lg:w-[340px] overflow-hidden rounded-2xl border-2 border-accent/40 bg-surface dark:bg-[#0c0f14] shadow-card-hover dark:shadow-[0_20px_60px_rgba(0,0,0,0.85),0_0_35px_rgba(212,175,55,0.12)]">
                 {!imgError ? (
                   <img
                     src="/profie.png"
@@ -307,7 +307,7 @@ export default function Home() {
               </div>
 
               {/* Floating Bottom Verified Badge (Positioned at frame base so photo remains 100% visible and uncropped) */}
-              <div className="absolute -bottom-4 inset-x-2 min-[380px]:inset-x-3 sm:-bottom-5 sm:inset-x-5 z-20 rounded-xl border border-accent/30 bg-[#080808]/95 p-3 sm:p-3.5 backdrop-blur-md shadow-[0_12px_28px_rgba(0,0,0,0.8),0_0_20px_rgba(212,175,55,0.1)] transition-transform duration-300 group-hover:-translate-y-0.5">
+              <div className="absolute -bottom-4 inset-x-2 min-[380px]:inset-x-3 sm:-bottom-5 sm:inset-x-5 z-20 rounded-xl border border-accent/30 bg-bg/95 p-3 sm:p-3.5 backdrop-blur-md shadow-card dark:shadow-[0_12px_28px_rgba(0,0,0,0.8),0_0_20px_rgba(212,175,55,0.1)] transition-transform duration-300 group-hover:-translate-y-0.5">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-accent/15 text-accent shadow-[0_0_10px_rgba(212,175,55,0.2)]">
@@ -595,7 +595,7 @@ export default function Home() {
             className="mt-14 text-center"
           >
             <Link to="/projects" className="btn-primary !px-8">
-              <span>View All 17 Archive Projects</span>
+              <span>View All 19 Archive Projects</span>
               <ArrowRight size={16} />
             </Link>
           </motion.div>
@@ -604,7 +604,7 @@ export default function Home() {
 
       {/* ─── 6. PREMIUM CALL TO ACTION SECTION ─── */}
       <section className="container-main mt-40">
-        <div className="relative overflow-hidden rounded-3xl border border-accent/40 bg-gradient-to-b from-card via-[#111111] to-[#080808] p-8 sm:p-16 text-center shadow-[0_20px_60px_rgba(0,0,0,0.8),0_0_40px_rgba(212,175,55,0.08)]">
+        <div className="relative overflow-hidden rounded-3xl border border-accent/40 bg-gradient-to-b from-card via-surface to-bg p-8 sm:p-16 text-center shadow-card-hover dark:shadow-[0_20px_60px_rgba(0,0,0,0.8),0_0_40px_rgba(212,175,55,0.08)]">
           {/* Subtle Ambient Gold Radiance */}
           <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-64 w-96 rounded-full bg-accent/10 blur-3xl" />
 

@@ -50,7 +50,7 @@ export default function ProjectCard({ project, index }) {
           <div className="flex items-center justify-between gap-3">
             <div className="flex flex-wrap items-center gap-2">
               {/* Small, Elegant Category Pill Badge */}
-              <span className="inline-flex items-center rounded-full border border-accent/30 bg-[#161616] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-champagne/90">
+              <span className="inline-flex items-center rounded-full border border-accent/30 bg-surface dark:bg-[#161616] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-champagne/90">
                 {formatCategory(project.category)}
               </span>
 

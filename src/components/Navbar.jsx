@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { navigation, personal } from '../data/personal';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,7 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-30 transition-all duration-300 ${
         scrolled
-          ? 'border-b border-border bg-[#080808]/90 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.5)]'
+          ? 'border-b border-border bg-bg/90 backdrop-blur-xl shadow-card dark:shadow-[0_4px_24px_rgba(0,0,0,0.5)]'
           : 'bg-transparent backdrop-blur-sm'
       }`}
     >
@@ -44,7 +45,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           {navigation
             .filter((n) => n.path !== '/contact')
             .map((item) => (
@@ -72,20 +73,27 @@ export default function Navbar() {
               </NavLink>
             ))}
 
+          {/* Desktop Theme Toggle */}
+          <ThemeToggle />
+
           <Link to="/contact" className="btn-primary !py-2.5 !px-5 !text-xs !tracking-wider uppercase">
             Contact
           </Link>
         </nav>
 
-        {/* Mobile Hamburger Button */}
-        <button
-          type="button"
-          onClick={() => setIsOpen((v) => !v)}
-          className="inline-flex items-center justify-center rounded-lg border border-border bg-card p-2.5 text-primary transition hover:border-accent/40 hover:text-accent md:hidden"
-          aria-label="Toggle navigation menu"
-        >
-          {isOpen ? <X size={18} /> : <Menu size={18} />}
-        </button>
+        {/* Mobile Controls: Theme Toggle & Hamburger Button */}
+        <div className="flex items-center gap-2.5 md:hidden">
+          <ThemeToggle />
+
+          <button
+            type="button"
+            onClick={() => setIsOpen((v) => !v)}
+            className="inline-flex items-center justify-center rounded-lg border border-border bg-card p-2 text-primary transition hover:border-accent/40 hover:text-accent"
+            aria-label="Toggle navigation menu"
+          >
+            {isOpen ? <X size={18} /> : <Menu size={18} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Drawer */}
@@ -96,7 +104,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="border-t border-border bg-[#080808]/98 backdrop-blur-2xl md:hidden"
+            className="border-t border-border bg-bg/98 backdrop-blur-2xl md:hidden"
           >
             <div className="container-main flex flex-col gap-1.5 py-5">
               {navigation.map((item) => (
