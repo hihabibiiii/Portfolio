@@ -26,7 +26,7 @@ export const projects = [
   },
   {
     title: "KhataGuru",
-    image: "/khataguru.wepb",
+    image: "/khataguru.webp",
     tagline: "Offline-First Accounting · Android App",
     category: "Android App Development",
     description: "An offline-first business accounting Android application designed to manage sales, purchases, inventory, customers, suppliers and daily financial transactions.",
